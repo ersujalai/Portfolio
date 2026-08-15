@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #5e3bee;
+  --primary-hover: #4b2ecc;
+  --heading-color: #282938;
+  --bg-shade: #f5fcff;
+  --github: #273c58;
+  --darkblue: #1c1e53;
+  --black: #000000;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+
+  --font-sans: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', 'Comfortaa', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: var(--darkblue);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-shade);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Reference UI Button Classes */
+.btn {
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(94, 59, 238, 0.25);
+}
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 6px 20px rgba(94, 59, 238, 0.35);
+}
+
+.btn-outline-primary {
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-github {
+  background-color: var(--github);
+  border: 1px solid var(--github);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(39, 60, 88, 0.2);
+}
+.btn-github:hover {
+  background-color: var(--white);
+  color: var(--github);
+}
+
+/* Card Styling inspired by logoipsum reference */
+.reference-card {
+  background: var(--bg-shade);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.reference-card-hover:hover {
+  transform: translateY(-4px);
+  border-bottom: 4px solid var(--primary);
+  box-shadow: 0 12px 30px rgba(94, 59, 238, 0.12);
+}
+
+.white-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.white-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sub--title {
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.section--title {
+  color: var(--heading-color);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+/* Responsive grid layout helpers */
+.hero--section {
+  background-color: var(--bg-shade);
+}
+
+/* Subtle background accent animation */
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 5s ease-in-out infinite;
+}
