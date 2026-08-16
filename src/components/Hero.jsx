@@ -13,7 +13,7 @@ import {
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
-export default function Hero() {
+export default function Hero({ onOpenResumeModal }) {
   const { personalInfo } = portfolioData;
 
   return (
@@ -73,16 +73,13 @@ export default function Hero() {
                 <span>View Projects</span>
               </a>
 
-              <a
-                href={personalInfo.placeholders.RESUME_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                download="Sujal_Prajapati_Resume.pdf"
-                className="flex items-center gap-2 px-6 py-3.5 rounded-lg text-base font-medium text-[#282938] bg-[#ffffff] border border-slate-300 hover:border-[#5e3bee] hover:text-[#5e3bee] transition-all shadow-2xs"
+              <button
+                onClick={onOpenResumeModal}
+                className="flex items-center gap-2 px-6 py-3.5 rounded-lg text-base font-semibold text-[#282938] bg-[#ffffff] border border-slate-300 hover:border-[#5e3bee] hover:text-[#5e3bee] transition-all shadow-2xs cursor-pointer active:scale-95"
               >
                 <FileText className="w-4 h-4 text-[#5e3bee]" />
-                <span>Resume</span>
-              </a>
+                <span>View Resume</span>
+              </button>
             </div>
 
             {/* Social Buttons */}
@@ -146,28 +143,6 @@ export default function Hero() {
                       Computer Engineering @ LJ University
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Top-Left Floating Badge: SPI Academic Standing */}
-              <div className="absolute -top-4 -left-4 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-bounce-slow">
-                <div className="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
-                  <Award className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <div className="text-[11px] font-mono text-slate-400 uppercase font-semibold">Academic SPI</div>
-                  <div className="text-sm font-extrabold text-[#282938] font-heading">8.58 / 10</div>
-                </div>
-              </div>
-
-              {/* Bottom-Right Floating Badge: Developer Stack */}
-              <div className="absolute -bottom-4 -right-4 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#5e3bee]/10 text-[#5e3bee] flex items-center justify-center">
-                  <Code2 className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <div className="text-[11px] font-mono text-slate-400 uppercase font-semibold">Specialization</div>
-                  <div className="text-xs font-bold text-[#5e3bee] font-heading">Full-Stack & ML</div>
                 </div>
               </div>
 

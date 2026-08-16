@@ -14,7 +14,7 @@ export const portfolioData = {
       RESUME_URL: "/resume/Sujal_Prajapati_Resume.pdf",
       // Web3Forms free access key for instant Gmail notifications
       // Get your free key instantly at https://web3forms.com (takes 10 seconds, no password required!)
-      WEB3FORMS_ACCESS_KEY: "YOUR_WEB3FORMS_ACCESS_KEY"
+      WEB3FORMS_ACCESS_KEY: "c77d0a81-5997-4c1d-8d91-a43a187b2343"
     },
 
     summary: "Computer Engineering student and aspiring Software Developer with hands-on experience building full-stack web applications using Django REST Framework, React, and Node.js. Skilled in database design, REST API development, JWT authentication, and applying machine learning using scikit-learn to real-world matching problems.",
@@ -162,7 +162,7 @@ console.log("Ready to build innovative solutions!");`
       platform: "Coursera",
       date: "Dec 2024",
       badge: "Java Fundamentals",
-      credentialUrl: "#"
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/FAAFL1M8UDVJ"
     },
     {
       id: "java-ds",
@@ -171,7 +171,7 @@ console.log("Ready to build innovative solutions!");`
       platform: "Coursera",
       date: "Jul 2025",
       badge: "Data Structures & OOP",
-      credentialUrl: "#"
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/RSAZ86I5UXNQ"
     },
     {
       id: "web-intro",
@@ -180,7 +180,7 @@ console.log("Ready to build innovative solutions!");`
       platform: "Coursera",
       date: "Dec 2025",
       badge: "Web Foundations",
-      credentialUrl: "#"
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/KQUTA05450S0"
     },
     {
       id: "eda-ml",
@@ -189,7 +189,7 @@ console.log("Ready to build innovative solutions!");`
       platform: "Coursera",
       date: "Jun 2026",
       badge: "Machine Learning & EDA",
-      credentialUrl: "#"
+      credentialUrl: "https://www.coursera.org/account/accomplishments/verify/3J8RYEUH9FG3"
     }
   ]
 };

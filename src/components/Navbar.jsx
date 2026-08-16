@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText, Sparkles, Send } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
-export default function Navbar() {
+export default function Navbar({ onOpenResumeModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -95,16 +95,13 @@ export default function Navbar() {
 
         {/* Right CTA Actions */}
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href={portfolioData.personalInfo.placeholders.RESUME_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            download="Sujal_Prajapati_Resume.pdf"
-            className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium text-[#273c58] bg-slate-100 hover:bg-slate-200 transition-colors"
+          <button
+            onClick={onOpenResumeModal}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-[#273c58] bg-slate-100 hover:bg-[#5e3bee]/10 hover:text-[#5e3bee] transition-all cursor-pointer shadow-2xs border border-slate-200/80 active:scale-95"
           >
             <FileText className="w-4 h-4 text-[#5e3bee]" />
-            <span>Resume</span>
-          </a>
+            <span>View Resume</span>
+          </button>
 
           <a
             href="#contact"
@@ -142,6 +139,17 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenResumeModal();
+                }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-[#282938] bg-slate-100 hover:bg-[#5e3bee]/10 hover:text-[#5e3bee] transition-colors"
+              >
+                <FileText className="w-4 h-4 text-[#5e3bee]" />
+                <span>View Resume</span>
+              </button>
+
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}

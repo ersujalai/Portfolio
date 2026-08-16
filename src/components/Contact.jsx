@@ -286,9 +286,7 @@ export default function Contact() {
                 )}
               </button>
 
-              <span className="text-xs text-slate-500 font-mono">
-                ⚡ Direct notifications dispatched to sbprajapati310707@gmail.com
-              </span>
+          
             </div>
           </form>
         </div>

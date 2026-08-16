@@ -76,7 +76,7 @@ export default function Footer() {
         {/* Bottom Copyright Content */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <div>
-            © {new Date().getFullYear()} Sujal Prajapati. Built for Software Engineering Opportunities.
+            © {new Date().getFullYear()} Sujal Prajapati
           </div>
           <div className="flex items-center gap-4">
             <span>LJ University (SPI: 8.58 / 10)</span>

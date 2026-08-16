@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Calendar, CheckCircle, Star, BookCheck } from 'lucide-react';
+import { Calendar, CheckCircle, Star, BookCheck, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Certifications() {
@@ -55,12 +55,23 @@ export default function Certifications() {
               </div>
 
               {/* Verified Footer */}
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
                   <CheckCircle className="w-3.5 h-3.5" />
                   <span>Verified Credential</span>
                 </div>
-                <span className="text-xs font-mono text-slate-400">{cert.badge}</span>
+
+                {cert.credentialUrl && cert.credentialUrl !== '#' && (
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-[#5e3bee] hover:text-white hover:bg-[#5e3bee] bg-[#5e3bee]/10 px-3 py-1.5 rounded-lg border border-[#5e3bee]/30 transition-all shadow-sm group/btn"
+                  >
+                    <span>View Certificate</span>
+                    <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -70,3 +81,4 @@ export default function Certifications() {
     </section>
   );
 }
+
