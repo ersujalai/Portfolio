@@ -49,7 +49,7 @@ export default function Contact() {
     setIsSubmitting(true);
     setFormStatus(null);
 
-    const accessKey = personalInfo.placeholders.WEB3FORMS_ACCESS_KEY;
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || personalInfo.placeholders.WEB3FORMS_ACCESS_KEY;
 
     // Check if key is configured
     if (accessKey && accessKey !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
