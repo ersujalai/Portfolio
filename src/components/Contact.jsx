@@ -66,8 +66,7 @@ export default function Contact() {
             email: formData.email,
             subject: formData.subject || `New Contact Message from ${formData.name}`,
             message: formData.message,
-            from_name: `${formData.name} (Portfolio Inquiry)`,
-            to_email: personalInfo.email
+            from_name: `${formData.name} (Portfolio Inquiry)`
           })
         });
 
