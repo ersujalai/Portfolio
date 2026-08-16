@@ -212,7 +212,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="John Doe"
+                  placeholder="Enter Your Name"
                   required
                   className="w-full px-4 py-3.5 rounded-lg bg-white border border-[#5e3bee] text-[#1c1e53] text-sm focus:outline-none focus:ring-2 focus:ring-[#5e3bee]/40 transition-all"
                 />
@@ -228,7 +228,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="john@example.com"
+                  placeholder="Enter Your Email"
                   required
                   className="w-full px-4 py-3.5 rounded-lg bg-white border border-[#5e3bee] text-[#1c1e53] text-sm focus:outline-none focus:ring-2 focus:ring-[#5e3bee]/40 transition-all"
                 />
@@ -245,7 +245,7 @@ export default function Contact() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                placeholder="Software Developer Role / Internship Inquiry"
+                placeholder="Enter Your Subject"
                 className="w-full px-4 py-3.5 rounded-lg bg-white border border-[#5e3bee] text-[#1c1e53] text-sm focus:outline-none focus:ring-2 focus:ring-[#5e3bee]/40 transition-all"
               />
             </div>
